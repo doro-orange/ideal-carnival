@@ -5,8 +5,10 @@ import { traeBadgePlugin } from 'vite-plugin-trae-solo-badge';
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: process.env.GITHUB_PAGES ? '/ideal-carnival/' : '/',
   build: {
     sourcemap: 'hidden',
+    outDir: 'dist',
   },
   plugins: [
     react({
